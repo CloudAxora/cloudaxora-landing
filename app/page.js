@@ -110,13 +110,13 @@ export default function Page() {
         <style>{`
           @media (max-width: 900px) {
             #container { padding: 28px 16px !important; }
-            #nav { margin-bottom: 28px !important; flex-direction: column !important; align-items: flex-start !important; }
+            #nav { margin-bottom: 28px !important; flex-direction: column !important; align-items: center !important; }
             #hero { grid-template-columns: 1fr !important; gap: 18px !important; }
             #section2 { grid-template-columns: 1fr !important; }
             #howGrid { grid-template-columns: 1fr !important; }
             #ctaRow { display: grid !important; gap: 10px !important; }
             #auditBtns { display: grid !important; gap: 10px !important; }
-            #pill { width: 100% !important; text-align: center !important; }
+            #pill {   width: auto !important;   display: inline-flex !important;   justify-content: center !important;   padding: 8px 12px !important;   font-size: 14px !important;   border-radius: 14px !important; }
             h1 { font-size: 34px !important; }
           }
 
