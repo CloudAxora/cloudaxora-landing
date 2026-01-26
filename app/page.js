@@ -23,20 +23,37 @@ const styles = {
 export default function Page() {
   return (
     <div style={styles.wrap}>
-      <div style={styles.container}>
+      <div id="container" style={styles.container}>
         <div style={styles.nav}>
           <div style={styles.brand}>CloudAxora</div>
           <a href={FORM_URL} style={styles.pill} target="_blank" rel="noreferrer">Get a Free AWS Audit</a>
         </div>
-
-        <div style={styles.hero}>
+        <style>{`
+          /* Mobile fixes */
+          @media (max-width: 900px) {
+            #hero { 
+              grid-template-columns: 1fr !important; 
+              gap: 18px !important;
+            }
+        
+            /* Prevent any sideways scrolling */
+            #container { overflow-x: hidden; }
+        
+            /* Make buttons stack nicely on mobile */
+            .ctas-mobile {
+              display: grid !important;
+              gap: 10px !important;
+            }
+          }
+        `}</style>
+        <div id="hero" style={styles.hero}>
           <div>
             <h1 style={styles.h1}>Weekly AWS cost + security audits with fix steps.</h1>
             <p style={styles.sub}>
-              CloudAxora detects cost leaks and security risks across AWS accounts and delivers an executive-ready report—every week.
+              CloudAxora detects cost leaks and security risks across AWS accounts and delivers an executive-ready report every week.
               Start with a free audit report in 24 hours.
             </p>
-            <div style={styles.ctas}>
+            <div className="ctas-mobile" style={styles.ctas}>
               <a href={FORM_URL} style={styles.primary} target="_blank" rel="noreferrer">Request Free Audit</a>
               <a href="#how" style={styles.secondary}>How it works</a>
             </div>
@@ -64,7 +81,7 @@ export default function Page() {
             <p style={{ marginTop: 8, opacity: 0.92, lineHeight: 1.5 }}>
               We’re onboarding a small set of pilot teams. Fill the form and we’ll send a report format + next steps.
             </p>
-            <div style={styles.grid}>
+            <div className="ctas-mobile" style={styles.grid}>
               <a href={FORM_URL} style={styles.primary} target="_blank" rel="noreferrer">Open Request Form</a>
               <a href="mailto:hello@cloudaxora.com" style={styles.secondary}>Email us</a>
             </div>
