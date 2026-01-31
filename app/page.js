@@ -152,6 +152,9 @@ export default function Page() {
               <a href="#how" style={styles.secondary}>
                 How it works
               </a>
+              <a href="https://drive.google.com/file/d/1qsD68--b_N9krvvTI-fAPuX30xx4aQc-/view?usp=sharing" style={styles.secondary} target="_blank" rel="noreferrer">
+                View Sample Report
+              </a>
             </div>
 
             <div id="section2" style={styles.section}>
